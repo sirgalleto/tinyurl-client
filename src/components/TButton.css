@@ -5,10 +5,16 @@
     height: 48px;
     padding: 0 10px;
 
+    cursor: pointer;
     vertical-align: top;
 
     color: white;
     border: none;
     outline: none;
     background-color: #ff5c30;
+}
+
+.TButton:active
+{
+    background-color: #ff7b57;
 }
