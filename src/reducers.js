@@ -1,15 +1,16 @@
+import uuid from 'uuid';
 import { combineReducers } from 'redux';
 import { ADD_URL } from './actions';
 
 let urlsState = [
   {
-    id: 1,
+    id: uuid.v4(),
     name: 'facebook.com',
     short: 'alssfz',
     clicks: 1
   },
   {
-    id: 2,
+    id: uuid.v4(),
     name: 'google.com',
     short: 'a24xloa',
     clicks: 20
@@ -21,7 +22,12 @@ function urls(state = urlsState, action) {
     case ADD_URL:
       return [
         ...state,
-        action.url
+        {
+          id: uuid.v4(),
+          name: action.name,
+          clicks: 0,
+          short: 'axwlioq'
+        }
       ]
     default:
       return state;
