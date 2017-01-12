@@ -1,12 +1,21 @@
-.CreateForm {
-  margin-top: 20px;
+.CreateForm
+{
+    margin-top: 20px;
 }
 
-.CreateForm-input {
-  height: 36px;
-  width: 80%;
-  max-width: 500px;
-  outline: none;
-  border: 1px solid gray;
-  border-right: none;
+.CreateForm-input
+{
+    font-size: 20px;
+
+    width: 80%;
+    max-width: 500px;
+    height: 36px;
+    padding: 5px 10px;
+
+    vertical-align: top;
+
+    color: gray;
+    border: 1px solid gray;
+    border-right: none;
+    outline: none;
 }

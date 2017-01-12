@@ -1,10 +1,14 @@
-.TButton {
-  height: 48px;
-  outline: none;
-  border: none;
-  background-color: #ff5c30;
-  font-size: 10pt;
-  color: white;
-  vertical-align: top;
-  padding: 0 10px;
+.TButton
+{
+    font-size: 10pt;
+
+    height: 48px;
+    padding: 0 10px;
+
+    vertical-align: top;
+
+    color: white;
+    border: none;
+    outline: none;
+    background-color: #ff5c30;
 }
