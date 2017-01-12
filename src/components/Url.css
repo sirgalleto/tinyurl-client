@@ -1,0 +1,39 @@
+.Url
+{
+    padding: 10px 0;
+}
+
+.Url-name
+{
+    padding: 5px 0;
+}
+
+.Url-name > a
+{
+    text-decoration: none;
+
+    color: #6a6a6a;
+}
+
+.Url-name > a:hover
+{
+    color: #306bff;
+}
+
+.Url-short
+{
+    display: inline-block;
+
+    width: 50%;
+
+    cursor: copy;
+}
+
+.Url-clicks
+{
+    display: inline-block;
+
+    width: 50%;
+
+    text-align: right;
+}
