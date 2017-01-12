@@ -1,0 +1,12 @@
+.CreateForm {
+  margin-top: 40px;
+}
+
+.CreateForm-input {
+  height: 36px;
+  width: 80%;
+  max-width: 400px;
+  outline: none;
+  border: 1px solid gray;
+  border-right: none;
+}
