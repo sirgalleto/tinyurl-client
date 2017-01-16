@@ -41,8 +41,8 @@ export function fetchUrls() {
   return function(dispatch) {
     dispatch(requestUrls());
 
-    return fetch(`localhost:8080/api/urls`)
+    return fetch(`http://localhost:8080/api/urls`)
     .then(response => response.json())
-    .then(json => dispatch.receiveUrls(json))
+    .then(json => dispatch(receiveUrls(json)))
   }
 }

@@ -1,12 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
+import thunkMiddleware from 'redux-thunk'
+import createLogger from 'redux-logger'
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import tinyApp from './reducers';
+import { fetchUrls } from './actions';
 import App from './App';
 import './index.css';
 
-let store = createStore(tinyApp);
+const loggerMiddleware = createLogger()
+
+let store = createStore(
+  tinyApp,
+  applyMiddleware(
+    thunkMiddleware,
+    loggerMiddleware
+  )
+);
 
 ReactDOM.render(
   <Provider store={store}>
@@ -14,3 +25,5 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
+
+store.dispatch(fetchUrls())
