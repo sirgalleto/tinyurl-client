@@ -39,7 +39,7 @@ function urls(state = urlsState,  action) {
       return Object.assign({}, {
         isFetching: false,
         didInvalidate: false,
-        urls: action.urls,
+        items: action.urls,
         lastUpdated: action.receivedAt
       });
     case ADD_URL:
