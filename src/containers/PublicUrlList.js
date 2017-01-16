@@ -4,7 +4,7 @@ import UrlList from '../components/UrlList';
 
 const mapStatetoProps = (state) => {
   return {
-    urls: state.urls
+    urls: state.urls.items
   }
 }
 
