@@ -6,13 +6,13 @@ import {
 
 const baseUrls = [
   {
-    id: uuid.v4(),
+    _id: uuid.v4(),
     name: 'facebook.com',
     short: 'alssfz',
     clicks: 1
   },
   {
-    id: uuid.v4(),
+    _id: uuid.v4(),
     name: 'google.com',
     short: 'a24xloa',
     clicks: 20
@@ -47,7 +47,7 @@ function urls(state = urlsState,  action) {
       isFetching: false,
       didInvalidate: false,
       items: [...state.items, {
-        id: uuid.v4(),
+        _id: uuid.v4(),
         name: action.name,
         clicks: 0,
         short: 'axwlioq'
