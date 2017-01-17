@@ -13,7 +13,9 @@ export const INVALIDATE_URLS = 'INVALIDATE_URLS';
  */
 
  export function addUrl(name) {
-   return { type: ADD_URL, name};
+   return {
+     type: ADD_URL, name
+   };
  }
 
 
