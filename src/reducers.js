@@ -1,28 +1,12 @@
-import uuid from 'uuid';
 import { combineReducers } from 'redux';
 import {
-  ADD_URL, REQUEST_URLS, RECEIVE_URLS, INVALIDATE_URLS
+  REQUEST_URLS, RECEIVE_URLS, INVALIDATE_URLS, RECEIVE_NEW_URL
 } from './actions';
-
-const baseUrls = [
-  {
-    _id: uuid.v4(),
-    name: 'facebook.com',
-    short: 'alssfz',
-    clicks: 1
-  },
-  {
-    _id: uuid.v4(),
-    name: 'google.com',
-    short: 'a24xloa',
-    clicks: 20
-  }
-];
 
 const urlsState = {
   isFetching: false,
   didInvalidate: false,
-  items: baseUrls
+  items: []
 };
 
 function urls(state = urlsState,  action) {
@@ -42,17 +26,12 @@ function urls(state = urlsState,  action) {
         items: action.urls,
         lastUpdated: action.receivedAt
       });
-    case ADD_URL:
-    return {
+    case RECEIVE_NEW_URL:
+    return Object.assign({}, {
       isFetching: false,
       didInvalidate: false,
-      items: [...state.items, {
-        _id: uuid.v4(),
-        name: action.name,
-        clicks: 0,
-        short: 'axwlioq'
-      }]
-    }
+      items: [ ...state.items, action.url]
+    });
     default:
     return state;
   }
